@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(nightbck.webp);
+}
+h1{
+    color: darkorange;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    height: 55px;
+
+}
+#gifOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 300px;
+}
+#pac1{
+    position: absolute;
+    top: 30%;
+    right: 80%;
+    transform: rotate(315deg);
+}
+#pac2{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: rotate(315deg);
+}
+#pac3{
+    position: absolute;
+    top: -2%;
+    left: 80%;
+    
+}
+#pac4{
+    position: absolute;
+    bottom: 2%;
+    right: 80%;
+    
+}
+#start{
+    background-color: rgba(255, 77, 0, 0.947);
+    position: absolute;
+    top: 150px;
+    left: 670px;
+    height: 55px;
+}
+#board {
+  background-color: black;
+  color: antiquewhite;
+  text-align: center;
+  height: 70px;
+  width: 3000px;
+}
+#score{
+    background-color: black;
+}
+table{
+    border: 1px solid rgba(255, 77, 0, 0.947);
+    width: 50px;
+    position: absolute;
+    left: 90%;
+    top: 70%;
+}
+th, td {
+    border: 1px solid rgba(255, 77, 0, 0.947);
+    padding: 8px;
+    text-align: center;
+    color: antiquewhite;
+}

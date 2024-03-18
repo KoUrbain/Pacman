@@ -25,7 +25,7 @@ function start() {
   
 
 
-  function createGame(n) {
+  /*function createGame(n) {
     // Vérifiez que n est au moins égal à 3
     console.log("Okay it works");
     if (n < 3) {
@@ -47,9 +47,32 @@ function start() {
     gameArray[pacmanIndex] = "C";
     gameArray[ghostIndex] = "^.";
     gameArray[fruitIndex] = "@";
+    
 
     return gameArray;
-  }
+  }*/
+
+  function createGame(n) {
+    if (n < 3) {
+      console.log("La taille du jeu doit être d'au moins 3.");
+      return;
+    }
+    // Send an AJAX request 
+    let xhr = new XMLHttpRequest();
+   
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Parse the response as JSON and use it as the game array
+            let gameArray = JSON.parse(xhr.responseText);
+            console.log("Game array:", gameArray);
+            // Use the game array as needed
+        }
+    };
+    xhr.open("GET", "pacman.php?n=" + n, true);
+    xhr.send();
+    return gameArray;
+}
+
 
   display();
 

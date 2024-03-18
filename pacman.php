@@ -46,24 +46,4 @@ $gameArray = generateGameArray($n);
 
 // Return the game array as JSON
 echo json_encode($gameArray);
-
-
-
-
-
-// Routeur pour les endpoints
-if ($_GET['action'] === 'rollDice') {
-    echo rollDice();
-} elseif ($_GET['action'] === 'holdDice') {
-    holdDice();
-} elseif ($_GET['action'] === 'calculateScore') {
-    calculateScore();
-} elseif ($_GET['action'] === 'leaderboard') {
-    leaderboard();
-} else {
-    http_response_code(404); // Endpoint non trouvé
-}
-
-
-
 ?>

@@ -65,11 +65,12 @@ function start() {
             // Parse the response as JSON and use it as the game array
             let gameArray = JSON.parse(xhr.responseText);
             console.log("Game array:", gameArray);
-            // Use the game array as needed
+            
         }
     };
     xhr.open("GET", "pacman.php?n=" + n, true);
     xhr.send();
+    console.log(gameArray);
     return gameArray;
 }
 
@@ -217,10 +218,8 @@ function start() {
         if (pacmanGame[current] === "^.") {
           pacmanGame[current] = ".";
         } else if (pacmanGame[current] === "^@") {
-          console.log("right????");
           pacmanGame[current] = "@";
         } else {
-          console.log("the fuck????");
           pacmanGame[current] = "_";
         }
 

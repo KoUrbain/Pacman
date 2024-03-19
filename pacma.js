@@ -24,34 +24,6 @@ function start() {
   tab.innerHTML = score;
   
 
-
-  /*function createGame(n) {
-    // Vérifiez que n est au moins égal à 3
-    console.log("Okay it works");
-    if (n < 3) {
-      console.log("La taille du jeu doit être d'au moins 3.");
-      return;
-    }
-
-    // Nombre de pastisse dans le jeu
-    numOfPas = n - 1;
-
-    // Initialisez le tableau avec des pastilles
-    let gameArray = Array(n).fill(".");
-
-    // Placez le Pacman, le fantôme et le fruit a des positions arbitraires
-    pacmanIndex = 0;
-    ghostIndex = parseInt(n / 2);
-    fruitIndex = 1;
-
-    gameArray[pacmanIndex] = "C";
-    gameArray[ghostIndex] = "^.";
-    gameArray[fruitIndex] = "@";
-    
-
-    return gameArray;
-  }*/
-
   function createGame(n) {
     if (n < 3) {
       console.log("La taille du jeu doit être d'au moins 3.");

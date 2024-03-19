@@ -12,12 +12,6 @@ function startNewGame($n) {
 }
 
 function generateGame($n) {
-    // Check if n is at least 3
-    if ($n < 3) {
-        echo "La taille du jeu doit être d'au moins 3.";
-        return null; // Return null if n is less than 3
-    }
-
     // Initialisez le tableau avec des pastilles
     $gameArray = array_fill(0, $n, ".");
 

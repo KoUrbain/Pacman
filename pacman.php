@@ -4,7 +4,7 @@ session_start();
 // Fonction pour démarrer un nouveau jeu
 function startNewGame($n) {
     $_SESSION['pacmanGame'] = generateGame($n);
-    $_SESSION['pacman_position'] = ; // Position initiale du Pac-Man
+    $_SESSION['pacman_position'] = 0; // Position initiale du Pac-Man
     $_SESSION['ghost_pos'] = intval($n / 2);
     $_SESSION['fruit_pos'] = 1;
     $_SESSION['score'] = 0; // Score initial
@@ -88,7 +88,7 @@ function saveScore($playerName) {
 }
 
 // Routeur pour gérer les demandes d'API
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (isset($_POST['action'])) {
         switch ($_POST['action']) {

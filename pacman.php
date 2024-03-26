@@ -4,9 +4,6 @@ session_start();
 // Fonction pour démarrer un nouveau jeu
 function startNewGame($n) {
     $_SESSION['pacmanGame'] = generateGame($n);
-    $_SESSION['pacman_position'] = 0; // Position initiale du Pac-Man
-    $_SESSION['ghost_pos'] = intval($n / 2);
-    $_SESSION['fruit_pos'] = 1;
     $_SESSION['score'] = 0; // Score initial
     $_SESSION['game_started'] = true;
 }
@@ -15,7 +12,7 @@ function generateGame($n) {
     // Initialisez le tableau avec des pastilles
     $gameArray = array_fill(0, $n, ".");
 
-    // Placez le Pacman, le fantôme et le fruit a des positions arbitraires
+    // Place le Pacman, le fantôme et le fruit a des positions arbitraires
     $pacmanIndex = 0;
     $ghostIndex = intval($n / 2);
     $fruitIndex = 1;
